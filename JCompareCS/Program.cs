@@ -13,8 +13,8 @@ namespace JCompareCS
         {
             JCompareCore core = new JCompareCore();
 
-            string srcFile = "C:\\Users\\Lee SunHyung\\Documents\\Visual Studio 2012\\Projects\\AlgorithmsPractice\\Algorithm1\\Algorithm1.cpp";
-            string dstFile = "C:\\Users\\Lee SunHyung\\Documents\\Visual Studio 2012\\Projects\\AlgorithmsPractice\\Algorithm2\\Algorithm2.cpp";
+            string srcFile = "Sample Source File Path";
+            string dstFile = "Sample Destination File Path";
 
             StreamReader srSource = new StreamReader(srcFile);
             while (srSource.Peek() >= 0)
