@@ -62,7 +62,7 @@ namespace JCompareCS
             StringBuilder sb = new StringBuilder(str);
 	        for(int i = 0; i < sb.Length; i++)
 	        {
-		        crcRes = CRC32Table[(byte)(crcRes ^ (ulong)sb[i])] ^ ((crcRes >> 8 ) & 0x00FFFFFF);
+		        crcRes = CRC32Table[(byte)(crcRes ^ (UInt32)sb[i])] ^ ((crcRes >> 8 ) & 0x00FFFFFF);
 	        }
 
 	        return crcRes ^ 0xFFFFFFFF;
@@ -167,7 +167,7 @@ namespace JCompareCS
         {
 	        FindLongestCommonSubsequences (0, srcHashList_.Count - 1, 0, dstHashList_.Count - 1);
 
-            compareResult_.Sort(delegate(CompareElement e1, CompareElement e2) { return e1.dstStartIndex.CompareTo(e2.srcStartIndex); });
+            compareResult_.Sort(delegate(CompareElement e1, CompareElement e2) { return e1.srcStartIndex.CompareTo(e2.srcStartIndex); });
         }
 
         public int GetResultCount()
